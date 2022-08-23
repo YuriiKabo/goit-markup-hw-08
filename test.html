@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minus quis,
+      corrupti dolorem magni aperiam atque repellendus perferendis doloremque
+      dolor ipsam soluta! Ratione vero, iste saepe voluptatibus consectetur
+      provident modi odit perferendis, a autem reprehenderit ducimus totam
+      minima, suscipit delectus quae error unde quidem beatae? Alias aperiam
+      amet corporis, vero mollitia explicabo consectetur sit fuga culpa nobis
+      autem ipsum animi sint ut deleniti eveniet laudantium modi eum cumque
+      architecto magnam.
+    </p>
+    <button data-modal-open>open</button>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="button" type="button" name="close" data-modal-close>
+          <svg class="modal-icon" width="11" height="11">
+            <use href="./img/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+.client {
+  &__title {
+    margin: 0 0 50px 0;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__link {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--social-icon-color) solid 1px;
+    border-radius: 4px;
+    color: var(--social-icon-color);
+    transition-property: transform border color;
+    transition: var(--trans);
+    &:hover,
+    &:focus {
+      border: var(--accent-color) solid 1px;
+      color: var(--accent-color);
+      transform: scale(105%);
+    }
+  }
+  &__icon {
+    fill: currentColor;
+    &:hover,
+    &:focus {
+      fill: currentColor;
+    }
+  }
+}

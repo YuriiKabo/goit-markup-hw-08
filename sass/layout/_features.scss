@@ -1,0 +1,39 @@
+/* --------- feature ---------- */
+.feature {
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(last-child) {
+    margin-right: 30px;
+  }
+  &__bg-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f4fa;
+    border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+  &__icon {
+    display: block;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+    margin-bottom: 10px;
+  }
+  &__text {
+    width: 270px;
+    font-size: 14px;
+    line-height: 1.71;
+    display: inline-block;
+    margin: 0;
+  }
+}
