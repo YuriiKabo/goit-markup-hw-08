@@ -5,7 +5,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  color: #212121;
+  @extend %title-color;
 }
 
 .form {
@@ -37,7 +37,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition-property: color background-color border-color outline fill;
-    transition: var(--trans);
+    @include trans();
     &::placeholder {
       font-size: 12px;
       line-height: 1.17;
@@ -64,7 +64,7 @@
       transform: translateY(-50%);
       fill: var(--title-text-color);
       transition-property: fill;
-      transition: var(--trans);
+      @include trans();
     }
   }
 
@@ -78,7 +78,7 @@
     border-radius: 4px;
     resize: none;
     transition-property: color border-color outline;
-    transition: var(--trans);
+    @include trans();
     &::placeholder {
       font-size: 12px;
       line-height: 1.17;
@@ -111,7 +111,7 @@
       border-radius: 2px;
       margin-right: 7px;
       transition-property: background-color border-color border;
-      transition: var(--trans);
+      @include trans();
     }
     &-icon {
       fill: var(--button-text-color);

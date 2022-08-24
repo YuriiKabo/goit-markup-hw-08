@@ -1,6 +1,4 @@
-/* @mixin transition($one, $two, $free, $time, $function) {
-  transition-property: $one, $two, $free;
-  transition-duration: $time;
-  transition-timing-function: $function;
+@mixin trans() {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
- */

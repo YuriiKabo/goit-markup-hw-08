@@ -12,7 +12,7 @@
   border: 0;
   border-radius: 4px;
   transition-property: transform background-color box-shadow;
-  transition: var(--trans);
+  @include trans();
   &:hover,
   &:focus {
     color: var(--button-text-color);

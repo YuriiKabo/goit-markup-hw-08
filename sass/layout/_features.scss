@@ -1,4 +1,5 @@
 /* --------- feature ---------- */
+
 .feature {
   &__list {
     display: flex;
@@ -22,11 +23,12 @@
   }
 
   &__title {
+    @extend %title-color;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    color: var(--title-text-color);
+
     margin-bottom: 10px;
   }
   &__text {

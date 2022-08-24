@@ -1,44 +1,3 @@
-*,
-*::before,
-*::after {
-  /* outline: 1px solid rgb(250, 195, 175);
-  background-color: rgba(0, 255, 106, 0.1); */
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-h1 h2 h3 h4 h5 h6 {
-  margin: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
-}
-
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -47,6 +6,9 @@ Document
 /**
 Use a better box model (opinionated).
 */
+/**
+Use a more readable tab size (opinionated).
+*/
 *,
 ::before,
 ::after {
@@ -54,9 +16,6 @@ Use a better box model (opinionated).
           box-sizing: border-box;
 }
 
-/**
-Use a more readable tab size (opinionated).
-*/
 html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -304,15 +263,62 @@ summary {
   --logo-black-color: #000000;
   --button-text-color: #ffffff;
   --social-icon-color: #afb1b8;
-  --trans: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*  --trans: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
-/* @mixin transition($one, $two, $free, $time, $function) {
-  transition-property: $one, $two, $free;
-  transition-duration: $time;
-  transition-timing-function: $function;
+.form__title, .filter__button, .team__name, .feature__title, .nav__link, .client__title, .team__title, .work__title {
+  color: var(--title-text-color);
 }
- */
+
+.client__title, .team__title, .work__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  margin: 0 0 50px 0;
+}
+
+/* @extend %section-title; */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* *,
+*::before,
+*::after {
+  outline: 1px solid rgb(250, 195, 175);
+  background-color: rgba(0, 255, 106, 0.1);
+} */
 .page {
   margin: 0;
   background-color: var(--background-color);
@@ -358,8 +364,10 @@ summary {
   transition-property: -webkit-transform background-color box-shadow;
   transition-property: transform background-color box-shadow;
   transition-property: transform background-color box-shadow, -webkit-transform background-color box-shadow;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover, .button:focus {
   color: var(--button-text-color);
@@ -368,24 +376,6 @@ summary {
           transform: scale(102%);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.section-title {
-  color: var(--title-text-color);
-  text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-}
-
-.title {
-  color: var(--title-text-color);
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .header {
@@ -399,6 +389,11 @@ summary {
       -ms-flex-align: center;
           align-items: center;
   background-color: #ffffff;
+}
+.header__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .header-logo__second-word {
   color: var(--logo-black-color);
@@ -426,15 +421,16 @@ summary {
 .nav__link {
   display: block;
   padding: 32px 0;
-  color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__link:hover, .nav__link:focus {
   color: var(--accent-color);
@@ -478,8 +474,10 @@ summary {
   padding: 32px 0;
   -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__link:hover, .contact__link:focus {
   color: var(--accent-color);
@@ -554,7 +552,6 @@ summary {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--title-text-color);
   margin-bottom: 10px;
 }
 .feature__text {
@@ -568,9 +565,6 @@ summary {
 .work {
   padding-top: 0;
   padding-bottom: 94px;
-}
-.work__title {
-  margin: 0 0 50px 0;
 }
 .work__list {
   display: -webkit-box;
@@ -611,9 +605,6 @@ summary {
 
 .team__section {
   background: #f5f4fa;
-}
-.team__title {
-  margin: 0 0 50px 0;
 }
 .team__list {
   display: -webkit-box;
@@ -675,8 +666,10 @@ summary {
   border-radius: 50%;
   -webkit-transition-property: background-color color;
   transition-property: background-color color;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social__link:hover, .team-social__link:focus {
   background-color: var(--accent-color);
@@ -688,9 +681,6 @@ summary {
   fill: currentColor;
 }
 
-.client__title {
-  margin: 0 0 50px 0;
-}
 .client__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -718,8 +708,10 @@ summary {
   transition-property: -webkit-transform border color;
   transition-property: transform border color;
   transition-property: transform border color, -webkit-transform border color;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client__link:hover, .client__link:focus {
   border: var(--accent-color) solid 1px;
@@ -747,7 +739,6 @@ summary {
   margin-right: 8px;
 }
 .filter__button {
-  color: var(--title-text-color);
   background-color: #f5f4fa;
   cursor: pointer;
   font-weight: 500;
@@ -758,8 +749,10 @@ summary {
   border-radius: 4px;
   -webkit-transition-property: color background-color scale box-shadow;
   transition-property: color background-color scale box-shadow;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter__button:hover, .filter__button:focus {
   color: var(--button-text-color);
@@ -800,8 +793,10 @@ summary {
   transition-property: -webkit-box-shadow;
   transition-property: box-shadow;
   transition-property: box-shadow, -webkit-box-shadow;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .galery__link:hover, .galery__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -833,8 +828,10 @@ summary {
   top: 0;
   -webkit-transform: translateY(101%);
           transform: translateY(101%);
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .galery__overlay-text {
   color: var(--button-text-color);
@@ -915,8 +912,10 @@ summary {
 .footer__address-link {
   -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer__address-link:hover, .footer__address-link:focus {
   color: var(--accent-color);
@@ -966,8 +965,10 @@ summary {
   border-radius: 50%;
   -webkit-transition-property: background-color;
   transition-property: background-color;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social__link:hover, .footer-social__link:focus {
   background-color: var(--accent-color);
@@ -1001,8 +1002,10 @@ summary {
   border-radius: 4px;
   -webkit-transition-property: border;
   transition-property: border;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form__input:focus {
   border: 1px solid var(--accent-color);
@@ -1032,8 +1035,10 @@ summary {
   z-index: 1;
   -webkit-transition-property: opacity visibility pointer-events;
   transition-property: opacity visibility pointer-events;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden {
@@ -1052,8 +1057,10 @@ summary {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
   width: 528px;
   height: 581px;
@@ -1091,8 +1098,10 @@ summary {
   height: 18px;
   -webkit-transition-property: fill;
   transition-property: fill;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ---------modal form-------- */
@@ -1102,7 +1111,6 @@ summary {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  color: #212121;
 }
 
 .form {
@@ -1141,8 +1149,10 @@ summary {
   border-radius: 4px;
   -webkit-transition-property: color background-color border-color outline fill;
   transition-property: color background-color border-color outline fill;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__input::-webkit-input-placeholder {
   font-size: 12px;
@@ -1208,8 +1218,10 @@ summary {
   fill: var(--title-text-color);
   -webkit-transition-property: fill;
   transition-property: fill;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__coment {
   width: 100%;
@@ -1222,8 +1234,10 @@ summary {
   resize: none;
   -webkit-transition-property: color border-color outline;
   transition-property: color border-color outline;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__coment::-webkit-input-placeholder {
   font-size: 12px;
@@ -1295,8 +1309,10 @@ summary {
   margin-right: 7px;
   -webkit-transition-property: background-color border-color border;
   transition-property: background-color border-color border;
-  -webkit-transition: var(--trans);
-  transition: var(--trans);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__checkbox-icon {
   fill: var(--button-text-color);

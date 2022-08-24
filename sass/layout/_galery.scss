@@ -19,7 +19,7 @@
     display: block;
     color: inherit;
     transition-property: box-shadow;
-    transition: var(--trans);
+    @include trans();
     &:hover,
     &:focus {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
@@ -46,7 +46,7 @@
     left: 0;
     top: 0;
     transform: translateY(101%);
-    transition: var(--trans);
+    @include trans();
   }
 
   &__overlay-text {

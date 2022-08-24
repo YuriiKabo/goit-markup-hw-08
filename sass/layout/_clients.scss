@@ -1,6 +1,6 @@
 .client {
   &__title {
-    margin: 0 0 50px 0;
+    @extend %section-title;
   }
 
   &__list {
@@ -20,7 +20,7 @@
     border-radius: 4px;
     color: var(--social-icon-color);
     transition-property: transform border color;
-    transition: var(--trans);
+    @include trans();
     &:hover,
     &:focus {
       border: var(--accent-color) solid 1px;

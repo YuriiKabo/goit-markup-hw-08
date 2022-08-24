@@ -9,7 +9,7 @@
   }
 
   &__button {
-    color: var(--title-text-color);
+    @extend %title-color;
     background-color: #f5f4fa;
     cursor: pointer;
     font-weight: 500;
@@ -19,7 +19,7 @@
     border: 0;
     border-radius: 4px;
     transition-property: color background-color scale box-shadow;
-    transition: var(--trans);
+    @include trans();
 
     &:hover,
     &:focus {

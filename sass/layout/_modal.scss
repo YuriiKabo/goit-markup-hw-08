@@ -7,7 +7,7 @@
   height: 100%;
   z-index: 1;
   transition-property: opacity visibility pointer-events;
-  transition: var(--trans);
+  @include trans();
 
   background-color: rgba(0, 0, 0, 0.2);
   &.is-hidden {
@@ -25,7 +25,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: var(--trans);
+  @include trans();
   padding: 40px;
   width: 528px;
   height: 581px;
@@ -58,6 +58,6 @@
     width: 18px;
     height: 18px;
     transition-property: fill;
-    transition: var(--trans);
+    @include trans();
   }
 }

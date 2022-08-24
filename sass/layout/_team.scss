@@ -3,7 +3,7 @@
     background: #f5f4fa;
   }
   &__title {
-    margin: 0 0 50px 0;
+    @extend %section-title;
   }
 
   &__list {
@@ -11,6 +11,7 @@
   }
 
   &__name {
+    @extend %title-color;
     text-align: center;
     font-weight: 500;
     font-size: 16px;
@@ -63,7 +64,7 @@
     height: 44px;
     border-radius: 50%;
     transition-property: background-color color;
-    transition: var(--trans);
+    @include trans();
     &:hover,
     &:focus {
       background-color: var(--accent-color);
