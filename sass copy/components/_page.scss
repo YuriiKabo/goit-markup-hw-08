@@ -5,12 +5,11 @@
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   position: relative;
-
-  @media (min-width: $mobile) {
+  padding-top: 80px;
+  @media (max-width: $mobile) {
   }
   @media (min-width: $tablet) {
   }
-  @media (min-width: 1200px) {
-    padding-top: 80px;
+  @media (min-width: $desktop) {
   }
 }

@@ -1,18 +1,44 @@
 .client {
   &__title {
-    @extend %section-title;
+    @media (max-width: 1199px) {
+      color: var(--title-text-color);
+      text-align: center;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.17;
+      text-align: center;
+      margin: 0 0 30px 0;
+    }
+    @media (min-width: 1200px) {
+      color: var(--title-text-color);
+      text-align: center;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.16;
+      margin: 0 0 50px 0;
+    }
   }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
   &__link {
-    width: 170px;
-    height: 92px;
+    @media (min-width: 480px) {
+      width: 210px;
+      height: 92px;
+    }
+    @media (min-width: 768px) {
+      width: 226px;
+      height: 92px;
+    }
+    @media (min-width: 1200px) {
+      width: 170px;
+      height: 92px;
+    }
     display: flex;
     justify-content: center;
     align-items: center;

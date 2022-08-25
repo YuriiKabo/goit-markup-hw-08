@@ -1,0 +1,12 @@
+%title-color {
+  color: var(--title-text-color);
+}
+%section-title {
+  @extend %title-color;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  margin: 0 0 50px 0;
+}
+/* @extend %section-title; */

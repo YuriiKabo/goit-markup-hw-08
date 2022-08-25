@@ -1,0 +1,141 @@
+.footer {
+  background-color: #2f303a;
+  font-size: 14px;
+  line-height: 1.71;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &-address__container {
+    width: 231px;
+    margin-right: 70px;
+  }
+
+  &-logo__indents {
+    margin-bottom: 20px;
+  }
+  &-logo__second-word {
+    color: var(--logo-white-color);
+  }
+
+  &-address {
+    font-style: normal;
+    &__item:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &-address__list {
+    display: flex;
+    flex-direction: column;
+    width: 231px;
+  }
+
+  &__address-link {
+    color: #ffffff;
+  }
+
+  &-contact-link {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__address-link {
+    transition-property: color;
+    @include trans();
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+/* --------FOOTER SOCIAL-------- */
+.footer-social {
+  &__container {
+    margin-right: auto;
+  }
+
+  &__title-text {
+    display: block;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-title-text-color);
+  }
+  &__list {
+    width: 206px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--button-text-color);
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition-property: background-color;
+    @include trans();
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+}
+
+/* --------- FOOTER FORM --------- */
+.footer-form {
+  display: flex;
+  &__container {
+    width: 570px;
+    height: 86px;
+  }
+  &__input {
+    width: 358px;
+    height: 50px;
+    padding: 0 16px;
+    margin-right: 12px;
+    background: #2f303a;
+    color: var(--button-text-color);
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+    border-radius: 4px;
+    transition-property: border;
+    @include trans();
+    &:focus {
+      border: 1px solid var(--accent-color);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button-icon {
+    margin-left: 10px;
+  }
+}
