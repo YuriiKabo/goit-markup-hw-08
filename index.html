@@ -14,12 +14,69 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="page">
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__box container">
         <nav class="nav">
           <a class="logo header-logo__indents" href="./" lang="en"
             >Web<span class="header-logo__second-word">Studio</span></a
           >
+          <button
+            class="header__menu-open-button js-open-menu"
+            type="button"
+            name="open"
+          >
+            <svg class="header__menu-icon" width="24" height="16">
+              <use href="./img/symbol-defs.svg#mob-menu-icon"></use>
+            </svg>
+          </button>
+          <!-- Mobile Menu -->
+          <div class="mob-menu is-hidden is-open js-menu-container">
+            <button
+              class="mob-menu__close-button js-close-menu"
+              type="button"
+              name="close"
+            >
+              <svg class="mob-menu__icon" width="19" height="19">
+                <use href="./img/symbol-defs.svg#mob-close-icon"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__nav-list">
+              <li class="mob-menu__nav-item">
+                <a class="mob-menu__nav-link" href="#">Студия</a>
+              </li>
+              <li class="mob-menu__nav-item">
+                <a class="mob-menu__nav-link" href="#">Портфолио</a>
+              </li>
+              <li class="mob-menu__nav-item">
+                <a class="mob-menu__nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mob-menu__contact-list">
+              <li class="mob-menu__contact-item">
+                <a class="mob-menu__contact-link" href="#">+38 096 111 11 11</a>
+              </li>
+              <li class="mob-menu__contact-item">
+                <a class="mob-menu__contact-link mob-menu__mail" href="#"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu__social-list">
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link" href="#">Instagram</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link" href="#">Twitter</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link" href="#">Facebook</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Header Nav -->
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link nav__link-active" href="./index.html"
@@ -53,7 +110,7 @@
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
     <main>
       <section class="hero">
         <div class="hero__container container">
@@ -161,7 +218,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="team__section section">
+      <section class="team__section section">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
@@ -170,8 +227,6 @@
                 class="img team-photo"
                 src="./img/img11.jpg"
                 alt="Product Designer"
-                width="270"
-                height="260"
               />
               <div class="team__card-sighn">
                 <h3 class="team__name">Игорь Демьяненко</h3>
@@ -217,8 +272,6 @@
                 class="img team-photo"
                 src="./img/img22.jpg"
                 alt="Frontend Developer"
-                width="270"
-                height="260"
               />
               <div class="team__card-sighn">
                 <h3 class="team__name title">Ольга Репина</h3>
@@ -264,8 +317,6 @@
                 class="img team-photo"
                 src="./img/img33.jpg"
                 alt="фото Николай Тарасов"
-                width="270"
-                height="260"
               />
               <div class="team__card-sighn">
                 <h3 class="team__name title">Николай Тарасов</h3>
@@ -311,8 +362,6 @@
                 class="img team-photo"
                 src="./img/img44.jpg"
                 alt="UI Designer"
-                width="270"
-                height="260"
               />
               <div class="team__card-sighn">
                 <h3 class="team__name title">Михаил Ермаков</h3>
@@ -355,7 +404,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <section class="section">
         <div class="container">
           <h2 class="client__title">Постоянные клиенты</h2>
@@ -406,7 +455,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer__container container">
         <div class="footer-address__container">
           <a class="logo footer-logo__indents" href="./" lang="en"
@@ -494,9 +543,9 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- Модалка -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button
           class="modal__close-button"
@@ -508,7 +557,6 @@
             <use href="./img/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
-
         <p class="form__title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="form">
           <ul>
@@ -601,7 +649,8 @@
           </button>
         </form>
       </div>
-    </div> -->
+    </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

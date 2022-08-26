@@ -1,3 +1,18 @@
+/* (() => {
+  const refs = {
+    openMenuBtn: document.querySelector(".header__menu-open-button"),
+    closeMenuBtn: document.querySelector(".mob-menu__close-button"),
+    menu: document.querySelector(".mob-menu"),
+  };
+
+  refs.openMenuBtn.addEventListener("click", toggleMenu);
+  refs.closeMenuBtn.addEventListener("click", toggleMenu);
+
+  function toggleMenu() {
+    refs.menu.classList.toggle("is-hidden");
+  }
+})(); */
+
 (() => {
   const mobileMenu = document.querySelector(".js-menu-container");
   const openMenuBtn = document.querySelector(".js-open-menu");

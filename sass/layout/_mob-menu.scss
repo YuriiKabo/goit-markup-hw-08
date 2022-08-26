@@ -1,0 +1,120 @@
+.mob-menu {
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  height: 796px;
+  padding: 48px 40px;
+  background-color: var(--background-color);
+  z-index: 2;
+  transition-property: transform opacity visibility pointer-events;
+  @include trans();
+
+  &.is-open {
+    /*  transform: translate(-101%); */
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+  }
+  &__close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    &:hover .mob-menu__icon,
+    &:focus .mob-menu__icon {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__icon {
+    width: 19px;
+    height: 19px;
+    transition-property: fill;
+    @include trans();
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: auto;
+  }
+
+  &__nav-item {
+  }
+
+  &__nav-link {
+    display: block;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    transition-property: color;
+    @include trans();
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  &__contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  &__contact-item {
+  }
+
+  &__contact-link {
+    display: block;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+
+  &__mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__social-item {
+  }
+
+  &__social-link {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+}

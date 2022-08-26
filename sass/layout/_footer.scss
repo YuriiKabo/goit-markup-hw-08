@@ -7,11 +7,31 @@
   &__container {
     display: flex;
     align-items: baseline;
+    @media (max-width: 1199px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
   }
 
   &-address__container {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1199px) {
+      align-items: center;
+    }
+    @media (min-width: 1200px) {
+      align-items: flex-start;
+    }
+
     width: 231px;
-    margin-right: 70px;
+    @media (min-width: 768px) {
+      margin-right: 165px;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 70px;
+    }
   }
 
   &-logo__indents {
@@ -23,14 +43,13 @@
 
   &-address {
     font-style: normal;
-    &__item:not(:last-child) {
-      margin-bottom: 9px;
-    }
   }
 
   &-address__list {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    gap: 8px;
     width: 231px;
   }
 
@@ -55,11 +74,16 @@
 /* --------FOOTER SOCIAL-------- */
 .footer-social {
   &__container {
-    margin-right: auto;
+    @media (min-width: 1200px) {
+      margin-right: auto;
+    }
   }
 
   &__title-text {
     display: block;
+    @media (max-width: 1199px) {
+      text-align: center;
+    }
     margin: 0 0 20px 0;
     font-weight: 700;
     font-size: 14px;
@@ -74,10 +98,10 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    gap: 10px;
   }
-  &__item:not(:last-child) {
-    margin-right: 10px;
-  }
+  /* &__item:not(:last-child) {
+    margin-right: 10px; }*/
 
   &__link {
     display: flex;
@@ -107,15 +131,31 @@
 /* --------- FOOTER FORM --------- */
 .footer-form {
   display: flex;
+  @media (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__container {
     width: 570px;
-    height: 86px;
+    /* height: 86px; */
   }
+
   &__input {
-    width: 358px;
+    @media (max-width: 480px) {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+    @media (min-width: 480px) and (max-width: 1199px) {
+      width: 450px;
+      margin: 0 0 20px 0;
+    }
+    @media (min-width: 1200px) {
+      width: 358px;
+      margin-right: 12px;
+    }
     height: 50px;
     padding: 0 16px;
-    margin-right: 12px;
     background: #2f303a;
     color: var(--button-text-color);
     outline: none;

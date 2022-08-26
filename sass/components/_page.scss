@@ -1,16 +1,14 @@
 .page {
+  @media (max-width: 767px) {
+    padding-top: 60px;
+  }
+  @media (min-width: 768px) {
+    padding-top: 80px;
+  }
   margin: 0;
   background-color: var(--background-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03px;
   position: relative;
-
-  @media (min-width: $mobile) {
-  }
-  @media (min-width: $tablet) {
-  }
-  @media (min-width: 1200px) {
-    padding-top: 80px;
-  }
 }
