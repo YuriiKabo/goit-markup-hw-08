@@ -293,13 +293,12 @@ summary {
   margin: -1px;
 }
 
-*,
+/* *,
 *::before,
 *::after {
   outline: 1px solid rgb(250, 195, 175);
   background-color: rgba(0, 255, 106, 0.1);
-}
-
+} */
 ul {
   list-style: none;
   margin: 0;
