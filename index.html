@@ -22,6 +22,8 @@
           >
           <button
             class="header__menu-open-button js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
             type="button"
             name="open"
           >
@@ -30,7 +32,7 @@
             </svg>
           </button>
           <!-- Mobile Menu -->
-          <div class="mob-menu is-hidden is-open js-menu-container">
+          <div class="mob-menu js-menu-container" id="mobile-menu">
             <button
               class="mob-menu__close-button js-close-menu"
               type="button"
@@ -40,7 +42,7 @@
                 <use href="./img/symbol-defs.svg#mob-close-icon"></use>
               </svg>
             </button>
-            <ul class="mob-menu__nav-list">
+            <ul class="mob-menu__nav-list mobile-menu">
               <li class="mob-menu__nav-item">
                 <a class="mob-menu__nav-link" href="./index.html">Студия</a>
               </li>

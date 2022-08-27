@@ -18,10 +18,13 @@
   z-index: 2;
   transition-property: opacity visibility pointer-events;
   @include trans();
-  &.is-hidden {
-    opacity: 0;
-    visibility: 0;
-    pointer-events: none;
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
+  &.is-open {
+    opacity: 1;
+    visibility: 1;
+    pointer-events: visible;
   }
   &__close-button {
     position: absolute;
