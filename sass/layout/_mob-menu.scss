@@ -1,17 +1,17 @@
 .mob-menu {
-  @media (min-width: 480px) {
-    width: 480px;
-  }
-  @media (min-width: 768px) {
-    display: none;
-  }
   position: fixed;
   top: 0;
   left: 50%;
   transform: translatex(-50%);
   display: flex;
   flex-direction: column;
-
+  width: 100%;
+  @media (min-width: 480px) {
+    width: 480px;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
   height: 796px;
   padding: 48px 40px;
   background-color: var(--background-color);
@@ -105,6 +105,7 @@
 
   &__social-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
   }
 

@@ -55,6 +55,9 @@
     }
   }
   &__title {
+    @media (max-width: 228px) {
+      display: none;
+    }
     @media (max-width: 1199px) {
       font-size: 26px;
       line-height: 1.61;
