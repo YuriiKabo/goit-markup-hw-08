@@ -27,6 +27,8 @@
     position: absolute;
     top: 10px;
     right: 15px;
+    background-color: var(--background-color);
+    border-radius: 3px;
     @media (min-width: 768px) {
       display: none;
     }
@@ -58,7 +60,7 @@
   display: flex;
   margin-right: auto;
   &__list {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
     display: flex;
@@ -102,7 +104,7 @@
 /* ---------Adress Nav------- */
 .contact {
   &__list {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
     display: flex;

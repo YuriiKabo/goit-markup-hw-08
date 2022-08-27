@@ -3,17 +3,19 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    & .galery__item:nth-child(3n) {
-      margin-right: 0;
-    }
-    & .galery__item:nth-child(-n + 3) {
-      margin-top: 0;
+    gap: 30px;
+
+    @media (min-width: 768px) {
     }
   }
   &__item {
-    width: 370px;
-    margin-top: 30px;
-    margin-right: 30px;
+    width: 450px;
+    @media (min-width: 768px) {
+      width: 354px;
+    }
+    @media (min-width: 1200px) {
+      width: 370px;
+    }
   }
   &__link {
     display: block;
@@ -34,6 +36,15 @@
   &__box {
     position: relative;
     overflow: hidden;
+  }
+  &__prewiew-photo {
+    width: 450px;
+    @media (min-width: 768px) {
+      width: 354px;
+    }
+    @media (min-width: 1200px) {
+      width: 370px;
+    }
   }
   &__overlay {
     background-color: rgba(33, 150, 243, 0.9);
@@ -66,6 +77,7 @@
     position: relative;
   }
   &__sighn-title {
+    @extend %title-color;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;

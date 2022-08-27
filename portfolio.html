@@ -13,13 +13,72 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body class="page">
+  <body class="page no-scroll">
     <header class="header">
       <div class="header__box container">
         <nav class="nav">
           <a class="logo header-logo__indents" href="./" lang="en"
             >Web<span class="header-logo__second-word">Studio</span></a
           >
+          <button
+            class="header__menu-open-button js-open-menu"
+            type="button"
+            name="open"
+          >
+            <svg class="header__menu-icon" width="24" height="16">
+              <use href="./img/symbol-defs.svg#mob-menu-icon"></use>
+            </svg>
+          </button>
+          <!-- Mobile Menu -->
+          <div class="mob-menu is-hidden is-open js-menu-container">
+            <button
+              class="mob-menu__close-button js-close-menu"
+              type="button"
+              name="close"
+            >
+              <svg class="mob-menu__icon" width="19" height="19">
+                <use href="./img/symbol-defs.svg#mob-close-icon"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__nav-list">
+              <li class="mob-menu__nav-item">
+                <a class="mob-menu__nav-link" href="./index.html">Студия</a>
+              </li>
+              <li class="mob-menu__nav-item">
+                <a class="mob-menu__nav-link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-menu__nav-item">
+                <a class="mob-menu__nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mob-menu__contact-list">
+              <li class="mob-menu__contact-item">
+                <a class="mob-menu__contact-link" href="#">+38 096 111 11 11</a>
+              </li>
+              <li class="mob-menu__contact-item">
+                <a class="mob-menu__contact-link mob-menu__mail" href="#"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu__social-list">
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link" href="#">Instagram</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link" href="#">Twitter</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link" href="#">Facebook</a>
+              </li>
+              <li class="mob-menu__social-item">
+                <a class="mob-menu__social-link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Header Nav -->
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link" href="./index.html">Студия</a>
@@ -94,7 +153,7 @@
               <a href="#" class="galery__link link">
                 <div class="galery__box">
                   <img
-                    class="prewiew-photo img"
+                    class="galery__prewiew-photo img"
                     src="./img/notebook.jpg"
                     alt="notebook"
                     width="370"
@@ -110,7 +169,7 @@
                   </div>
                 </div>
                 <div class="galery__sighn-box">
-                  <h2 class="galery__sighn-title title">Технокряк</h2>
+                  <h2 class="galery__sighn-title">Технокряк</h2>
                   <p class="galery__sighn-type">Веб-сайт</p>
                 </div>
               </a>
@@ -119,7 +178,7 @@
               <a href="#" class="galery__link link">
                 <div class="galery__box">
                   <img
-                    class="prewiew-photo img"
+                    class="galery__prewiew-photo img"
                     src="./img/basketball.jpg"
                     alt="notebook"
                     width="370"
@@ -134,7 +193,7 @@
                   </div>
                 </div>
                 <div class="galery__sighn-box">
-                  <h2 class="galery__sighn-title title">
+                  <h2 class="galery__sighn-title">
                     Постер <span lang="en">New Orlean vs Golden Star</span>
                   </h2>
                   <p class="galery__sighn-type">Дизайн</p>
@@ -145,7 +204,7 @@
               <a href="#" class="galery__link link">
                 <div class="galery__box">
                   <img
-                    class="prewiew-photo img"
+                    class="galery__prewiew-photo img"
                     src="./img/fish.jpg"
                     alt="notebook"
                     width="370"
@@ -160,7 +219,7 @@
                   </div>
                 </div>
                 <div class="galery__sighn-box">
-                  <h2 class="galery__sighn-title title">
+                  <h2 class="galery__sighn-title">
                     Ресторан <span lang="en">Seafood</span>
                   </h2>
                   <p class="galery__sighn-type">Приложение</p>
@@ -171,7 +230,7 @@
               <a href="#" class="galery__link link">
                 <div class="galery__box">
                   <img
-                    class="prewiew-photo img"
+                    class="galery__prewiew-photo img"
                     src="./img/headphones.jpg"
                     alt="notebook"
                     width="370"
@@ -186,7 +245,7 @@
                   </div>
                 </div>
                 <div class="galery__sighn-box">
-                  <h2 class="galery__sighn-title title">
+                  <h2 class="galery__sighn-title">
                     Проект <span lang="en">Prime</span>
                   </h2>
                   <p class="galery__sighn-type">Маркетинг</p>
@@ -197,7 +256,7 @@
               <a href="#" class="galery__link link">
                 <div class="galery__box">
                   <img
-                    class="prewiew-photo img"
+                    class="galery__prewiew-photo img"
                     src="./img/boxes.jpg"
                     alt="notebook"
                     width="370"
@@ -212,7 +271,7 @@
                   </div>
                 </div>
                 <div class="galery__sighn-box">
-                  <h2 class="galery__sighn-title title">
+                  <h2 class="galery__sighn-title">
                     Проект <span lang="en">Boxes</span>
                   </h2>
                   <p class="galery__sighn-type">Приложение</p>
@@ -223,7 +282,7 @@
               <a href="#" class="galery__link link">
                 <div class="galery__box">
                   <img
-                    class="prewiew-photo img"
+                    class="galery__prewiew-photo img"
                     src="./img/display.jpg"
                     alt="notebook"
                     width="370"
@@ -238,7 +297,7 @@
                   </div>
                 </div>
                 <div class="galery__sighn-box">
-                  <h2 class="galery__sighn-title title" lang="en">
+                  <h2 class="galery__sighn-title" lang="en">
                     Inspiration has no Borders
                   </h2>
                   <p class="galery__sighn-type">Веб-сайт</p>
@@ -249,7 +308,7 @@
               <a href="#" class="galery__link link">
                 <div class="galery__box">
                   <img
-                    class="prewiew-photo img"
+                    class="galery__prewiew-photo img"
                     src="./img/book.jpg"
                     alt="notebook"
                     width="370"
@@ -264,7 +323,7 @@
                   </div>
                 </div>
                 <div class="galery__sighn-box">
-                  <h2 class="galery__sighn-title title">
+                  <h2 class="galery__sighn-title">
                     Издание <span lang="en">Limited Edition</span>
                   </h2>
                   <p class="galery__sighn-type">Дизайн</p>
@@ -275,7 +334,7 @@
               <a href="#" class="galery__link link">
                 <div class="galery__box">
                   <img
-                    class="prewiew-photo img"
+                    class="galery__prewiew-photo img"
                     src="./img/label.jpg"
                     alt="notebook"
                     width="370"
@@ -290,7 +349,7 @@
                   </div>
                 </div>
                 <div class="galery__sighn-box">
-                  <h2 class="galery__sighn-title title">
+                  <h2 class="galery__sighn-title">
                     Проект <span lang="en">LAB</span>
                   </h2>
                   <p class="galery__sighn-type">Маркетинг</p>
@@ -301,7 +360,7 @@
               <a href="#" class="galery__link link">
                 <div class="galery__box">
                   <img
-                    class="prewiew-photo img"
+                    class="galery__prewiew-photo img"
                     src="./img/laptop.jpg"
                     alt="notebook"
                     width="370"
@@ -316,7 +375,7 @@
                   </div>
                 </div>
                 <div class="galery__sighn-box">
-                  <h2 class="galery__sighn-title title" lang="en">
+                  <h2 class="galery__sighn-title" lang="en">
                     Growing Business
                   </h2>
                   <p class="galery__sighn-type">Приложение</p>
@@ -416,5 +475,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
