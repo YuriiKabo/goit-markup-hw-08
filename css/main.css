@@ -293,13 +293,12 @@ summary {
   margin: -1px;
 }
 
-*,
+/* *,
 *::before,
 *::after {
   outline: 1px solid rgb(250, 195, 175);
   background-color: rgba(0, 255, 106, 0.1);
-}
-
+} */
 /* .no-scroll {
   overflow: hidden;
 } */
@@ -1550,12 +1549,10 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
+  /* gap: 20px; */
 }
-.mob-menu__social-item {
-  /* &:not(:last-child) {
-    border-right: 5px solid rgba(33, 33, 33);
-  } */
+.mob-menu__social-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 .mob-menu__social-link {
   position: relative;
@@ -1564,16 +1561,18 @@ img {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  padding: 0 10px;
+  /* border-left: 5px solid rgba(33, 33, 33); */
   /* transform: rotate(90deg); */
-}
-.mob-menu__social-link::after {
-  content: "";
-  width: 1px;
-  height: 100%;
-  background: rgba(33, 33, 33, 0.2);
-  position: absolute;
-  top: 0;
-  right: -10px;
+  /* &::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.2);
+    position: absolute;
+    top: 0;
+    right: -10px;
+  } */
 }
 
 /* ---------Modal--------- */
