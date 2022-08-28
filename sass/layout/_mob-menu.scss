@@ -41,11 +41,6 @@
   transition-property: opacity visibility pointer-events;
   @include trans();
 
-  /* &.is-hidden {
-    opacity: 0;
-    visibility: 0;
-    pointer-events: none;
-  } */
   &__close-button {
     position: absolute;
     top: 10px;
@@ -81,8 +76,8 @@
     margin-bottom: auto;
   }
 
-  &__nav-item {
-  }
+  /* &__nav-item {
+  } */
 
   &__nav-link {
     /* display: block; */
@@ -106,8 +101,8 @@
     margin-bottom: 64px;
   }
 
-  &__contact-item {
-  }
+  /* &__contact-item {
+  } */
 
   &__contact-link {
     /* display: block; */
@@ -146,17 +141,5 @@
     letter-spacing: 0.02em;
     color: var(--accent-color);
     padding: 0 10px;
-    /* border-left: 5px solid rgba(33, 33, 33); */
-
-    /* transform: rotate(90deg); */
-    /* &::after {
-      content: "";
-      width: 1px;
-      height: 100%;
-      background: rgba(33, 33, 33, 0.2);
-      position: absolute;
-      top: 0;
-      right: -10px;
-    } */
   }
 }
