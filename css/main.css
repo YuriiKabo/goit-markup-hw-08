@@ -299,9 +299,14 @@ summary {
   outline: 1px solid rgb(250, 195, 175);
   background-color: rgba(0, 255, 106, 0.1);
 } */
-/* .no-scroll {
+.no-scroll {
   overflow: hidden;
-} */
+}
+
+.scroll {
+  overflow: scroll;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -1438,9 +1443,6 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  visibility: 0;
-  pointer-events: none;
 }
 @media (min-width: 480px) {
   .mob-menu {
@@ -1452,10 +1454,10 @@ img {
     display: none;
   }
 }
-.mob-menu.is-open {
-  opacity: 1;
-  visibility: 1;
-  pointer-events: visible;
+.mob-menu.is-hidden {
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
 }
 .mob-menu__close-button {
   position: absolute;

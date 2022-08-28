@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body class="page no-scroll">
+  <body class="page scroll no-scroll">
     <header class="header">
       <div class="header__box container">
         <nav class="nav">
@@ -22,8 +22,6 @@
           >
           <button
             class="header__menu-open-button js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
             type="button"
             name="open"
           >
@@ -32,7 +30,7 @@
             </svg>
           </button>
           <!-- Mobile Menu -->
-          <div class="mob-menu js-menu-container" id="mobile-menu">
+          <div class="mob-menu is-hidden js-menu-container">
             <button
               class="mob-menu__close-button js-close-menu"
               type="button"
