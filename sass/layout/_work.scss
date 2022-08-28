@@ -15,11 +15,16 @@
   &__item {
     margin-right: 30px;
     position: relative;
+    width: 370px;
     &:last-child {
       margin-right: 0;
     }
   }
-
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
   &__label-container {
     position: absolute;
     justify-content: center;

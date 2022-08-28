@@ -784,9 +784,15 @@ img {
 .work__item {
   margin-right: 30px;
   position: relative;
+  width: 370px;
 }
 .work__item:last-child {
   margin-right: 0;
+}
+.work__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .work__label-container {
   position: absolute;
@@ -846,6 +852,11 @@ img {
   .team__card {
     width: 270px;
   }
+}
+.team-photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .team__card-sighn {
   display: -webkit-box;
