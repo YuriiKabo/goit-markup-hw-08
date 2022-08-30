@@ -100,8 +100,6 @@
     display: flex;
     gap: 10px;
   }
-  /* &__item:not(:last-child) {
-    margin-right: 10px; }*/
 
   &__link {
     display: flex;
@@ -179,3 +177,11 @@
     margin-left: 10px;
   }
 }
+
+/* .footer-connect {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 100%;
+} */
