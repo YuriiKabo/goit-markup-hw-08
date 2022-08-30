@@ -17,15 +17,13 @@
   &-address__container {
     display: flex;
     flex-direction: column;
-
+    width: 231px;
     @media (max-width: 1199px) {
       align-items: center;
     }
     @media (min-width: 1200px) {
       align-items: flex-start;
     }
-
-    width: 231px;
     @media (min-width: 768px) {
       margin-right: 165px;
     }
@@ -48,7 +46,9 @@
   &-address__list {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    @media (max-width: 1199px) {
+      text-align: center;
+    }
     gap: 8px;
     width: 231px;
   }
