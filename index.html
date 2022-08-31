@@ -596,6 +596,7 @@
             <use href="./img/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
+        <!-- Форма модалки -->
         <p class="form__title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="form">
           <ul>
@@ -674,13 +675,15 @@
               required
             />
             <label for="check" class="form__checkbox-label">
-              <span class="form__checkbox-quad">
-                <svg class="form__checkbox-icon" width="16" height="15">
-                  <use href="./img/symbol-defs.svg#icon-check"></use>
-                </svg>
-              </span>
-              Соглашаюсь с рассылкой и принимаю
-              <a href="#" class="form__checkbox-link link">Условия договора</a>
+              <div class="form__checkbox-plus-text">
+                <span class="form__checkbox-quad">
+                  <svg class="form__checkbox-icon" width="16" height="15">
+                    <use href="./img/symbol-defs.svg#icon-check"></use>
+                  </svg>
+                </span>
+                <p>Соглашаюсь с рассылкой и принимаю</p>
+              </div>
+              <a href="#" class="form__checkbox-link">Условия договора</a>
             </label>
           </div>
           <button class="form__button-send button" type="submit">

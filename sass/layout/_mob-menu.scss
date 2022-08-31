@@ -7,15 +7,14 @@
   z-index: 2;
   transition-property: opacity visibility pointer-events;
   @include trans();
-
   background-color: rgba(0, 0, 0, 0.2);
   &.is-hidden {
     opacity: 0;
-    visibility: 0;
+    visibility: hidden;
     pointer-events: none;
     & .mob-menu {
       opacity: 0;
-      visibility: 0;
+      visibility: hidden;
       pointer-events: none;
     }
   }
@@ -32,6 +31,7 @@
 
   @media (min-width: 768px) {
     display: none;
+    visibility: hidden;
   }
   padding: 48px 40px;
   background-color: var(--background-color);

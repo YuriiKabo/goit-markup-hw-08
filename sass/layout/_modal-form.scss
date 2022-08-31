@@ -99,7 +99,11 @@
     &-label {
       display: flex;
       align-items: center;
-      /* letter-spacing: 0.03em; */
+      gap: 4px;
+      @media (max-width: 480px) {
+        flex-wrap: wrap;
+        /* justify-content: end; */
+      }
       @media (max-width: 1199px) {
         font-size: 12px;
         line-height: 1.17;
@@ -109,6 +113,7 @@
         line-height: 1.71;
       }
     }
+
     &-quad {
       display: flex;
       align-items: center;
@@ -117,7 +122,7 @@
       height: 15px;
       border: 2px solid var(--title-text-color);
       border-radius: 2px;
-      margin-right: 8px;
+
       transition-property: background-color border-color border;
       @include trans();
     }
@@ -133,7 +138,7 @@
     }
     &-link {
       color: var(--accent-color);
-      margin-left: 4px;
+      /* margin-left: 4px; */
       border-bottom: 1px solid var(--accent-color);
       line-height: 0.89;
     }
@@ -141,5 +146,10 @@
   &__button-send {
     margin: 0 auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  &__checkbox-plus-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
